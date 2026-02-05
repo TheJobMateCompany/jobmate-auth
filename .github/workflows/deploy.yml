@@ -22,7 +22,11 @@ jobs:
         with:
           submodules: recursive # CRUCIAL : Récupère le code proto
           token: ${{ secrets.GITHUB_TOKEN }}
-
+      
+      - name: Lowercase Repo Name
+        run: |
+          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+      
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
