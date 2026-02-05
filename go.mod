@@ -1,6 +1,6 @@
 module github.com/TheJobMateCompany/jobmate-auth
 
-go 1.25.5
+go 1.21
 
 replace github.com/TheJobMateCompany/jobmate-proto => ./proto
 
